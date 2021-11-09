@@ -1,0 +1,19 @@
+Using a recycler view, the user is able to view a list of all programs in the next 6 hours.
+
+The user is able to record any of the programs that are in the next 6 hours
+    - The user is only able view the progress of the recording in the notifications tab.
+    - Still need to display some sort of view for the user to see the progress within the application.
+
+The user can cancel a scheduled recording at any given time
+    - The user is only able to cancel the recording in the notifications tab.
+    - Still need to display a cancel button.
+
+Need to update the logic to handle multiple downloads and resolve conflicts
+
+The main functionality is in the ProgramDownloadsService file where a service can download
+a program when requested and updates the activity via binding. If a program is downloading, the service will promote
+itself to a foreground service when the activity is stopped/unbinds so the download is not interrupted.
+
+Using the AlarmManager, I created a bridge between the application and the Android system alarm service,
+allowing the user to receive a broadcast message if the download is in the foreground.
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CardView.Light"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="4dp"
+    android:backgroundTint="#454242"
+    android:elevation="10dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/heart_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="start|center"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_heart" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/program_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="start|center"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/ic_tnt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time_slot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/_11_00"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="40dp"
+        android:text="@string/nba"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/circle_play_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end|center"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_play_circle" />
+
+</androidx.cardview.widget.CardView>

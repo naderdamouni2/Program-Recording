@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/programsListFragment">
+
+    <fragment
+        android:id="@+id/programsListFragment"
+        android:name="com.example.programrecording.view.ProgramListFragment"
+        android:label="fragment_program_list"
+        tools:layout="@layout/fragment_programs_list">
+        <action
+            android:id="@+id/programList_to_programDetails"
+            app:destination="@id/programDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/programDetailsFragment"
+        android:name="com.example.programrecording.view.ProgramDetailsFragment"
+        android:label="fragment_program_details"
+        tools:layout="@layout/fragment_program_details">
+        <argument
+            android:name="details"
+            app:argType="com.example.programrecording.model.ProgramMock" />
+        <action
+            android:id="@+id/programDetail_to_futureProgramDetails"
+            app:destination="@id/futureProgramDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/futureProgramDetailsFragment"
+        android:name="com.example.programrecording.view.FutureProgramDetailsFragment"
+        android:label="fragment_future_program_details"
+        tools:layout="@layout/fragment_future_program_details" >
+        <argument
+            android:name="details"
+            app:argType="com.example.programrecording.model.FutureProgramMock" />
+    </fragment>
+
+</navigation>
